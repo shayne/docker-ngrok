@@ -6,7 +6,6 @@ RUN curl -Lk 'https://circle-artifacts.com/gh/andyshinn/alpine-pkg-glibc/6/artif
 RUN apk add --allow-untrusted glibc-2.21-r2.apk && rm glibc-2.21-r2.apk
 RUN curl -Lk 'https://dl.ngrok.com/ngrok_2.0.19_linux_amd64.zip' > ngrok.zip
 RUN unzip ngrok.zip -d /bin && rm -f ngrok.zip
-RUN echo 'inspect_addr: 0.0.0.0:4040' > /.ngrok
 ADD ngrok_discover /bin/ngrok_discover
 RUN chmod +x /bin/ngrok_discover
 
