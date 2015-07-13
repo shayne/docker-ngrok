@@ -21,7 +21,7 @@ We'll set up a simple HTTP server in a docker container called `www`:
 
 Now we'll link the HTTP server container into an ngrok container to expose the server on the internet:
 
-    docker run -d -p 4040 --link www:http --name www_ngrok fnichol/ngrok
+    docker run -d -p 4040 --link www:http --name www_ngrok shayne/ngrok
 
 To get the `*.ngrok.com` address, check the container's logs:
 
