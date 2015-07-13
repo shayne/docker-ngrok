@@ -12,7 +12,7 @@ fi
 
 case "$1" in
   -h|help)  ARGS=$1 ;;
-  *)        ARGS="-config /.ngrok -log stdout $* $FWD" ;;
+  *)        ARGS="http $FWD" ;;
 esac
 
 exec /bin/ngrok $ARGS
