@@ -39,7 +39,7 @@ Pull requests are very welcome! Make sure your patches are well tested. Ideally 
 ## Authors
 
 Modified and maintained by [Shayne Sweeney][shayne] (<shaynesweeney@me.com>).
-Original repo [fnichol/docker-ngrok][https://github.com/fnichol/docker-ngrok].
+Original repo [fnichol/docker-ngrok][original_repo].
 
 ## License
 
@@ -47,6 +47,7 @@ MIT (see [License.txt][license])
 
 [shayne]:  https://github.com/shayne
 [repo]:     https://github.com/shayne/docker-ngrok
+[original_repo]: https://github.com/fnichol/docker-ngrok
 [issues]:   https://github.com/shayne/docker-ngrok/issues
 [license]:  https://github.com/shayne/docker-ngrok/blob/master/License.txt
 
