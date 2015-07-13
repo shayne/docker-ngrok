@@ -5,14 +5,14 @@ if [ "$1" = "/bin/sh" ]; then
 fi
 
 if [ -n "$HTTPS_PORT" ]; then
-  FWD="`echo $HTTPS_PORT | sed 's|^tcp://||'`"
+  FWD="https `echo $HTTPS_PORT | sed 's|^tcp://||'`"
 elif [ -n "$HTTP_PORT" ]; then
-  FWD="`echo $HTTP_PORT | sed 's|^tcp://||'`"
+  FWD="http `echo $HTTP_PORT | sed 's|^tcp://||'`"
 fi
 
 case "$1" in
   -h|help)  ARGS=$1 ;;
-  *)        ARGS="http $FWD" ;;
+  *)        ARGS="$FWD --log stdout --log-level error" ;;
 esac
 
 exec /bin/ngrok $ARGS
